@@ -228,6 +228,7 @@ public:
 	// dirList operations
 	//-------------------
 	void allowExt(string extension);
+	void clearExt();
 	int listDir(string path);
 	int listDir();
 

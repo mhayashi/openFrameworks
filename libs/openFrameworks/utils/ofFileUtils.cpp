@@ -961,6 +961,11 @@ void ofDirectory::allowExt(string extension){
 }
 
 //------------------------------------------------------------------------------------------------------------
+void ofDirectory::clearExt(){
+	extensions.clear();
+}
+
+//------------------------------------------------------------------------------------------------------------
 int ofDirectory::listDir(string directory){
 	open(directory);
 	return listDir();
