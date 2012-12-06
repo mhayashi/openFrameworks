@@ -77,7 +77,14 @@ void ofRunApp(ofBaseApp * OFSA){
 
 	window->runAppViaInfiniteLoop(OFSAptr.get());
 }
-
+//--------------------------------------
+void ofSetWindowPtr(ofPtr<ofAppBaseWindow> w){
+    window = w;
+}
+//--------------------------------------
+void ofSetWindowPtr(ofAppBaseWindow * windowPtr){
+    ofSetWindowPtr(ofPtr<ofAppBaseWindow>(windowPtr,std::ptr_fun(noopDeleter)));
+}
 //--------------------------------------
 void ofSetupOpenGL(ofPtr<ofAppBaseWindow> windowPtr, int w, int h, int screenMode){
 	window = windowPtr;

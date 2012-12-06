@@ -14,7 +14,8 @@ void 		ofSetupOpenGL(int w, int h, int screenMode);	// sets up the opengl contex
 
 void 		ofRunApp(ofPtr<ofBaseApp> OFSA); // this is for deprecated, use an ofPtr
 void 		ofRunApp(ofBaseApp * OFSA = NULL);
-
+void        ofSetWindowPtr(ofPtr<ofAppBaseWindow> windowPtr);
+void        ofSetWindowPtr(ofAppBaseWindow * windowPtr);
 ofBaseApp * ofGetAppPtr();
 void ofSetAppPtr(ofPtr<ofBaseApp> appPtr);
 
